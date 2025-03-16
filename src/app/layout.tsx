@@ -30,8 +30,8 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" className="m-0 p-0">
+      <body className="m-0 p-0">
         <Header isOpen={isOpen} toggleSidebar={toggleSidebar}/>
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
         <main className={`pt-20 p-4 transition-all duration-350" ${
