@@ -1,4 +1,4 @@
-// src/lib/auth.ts
+"use client";
 import { NextAuthOptions, User, getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 
