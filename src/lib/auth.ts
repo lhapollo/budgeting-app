@@ -1,6 +1,6 @@
 // src/lib/auth.ts
 import { NextAuthOptions, User, getServerSession } from "next-auth";
-import { redirect } from "next/navigation"; // Remove useRouter
+import { redirect } from "next/navigation";
 
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
