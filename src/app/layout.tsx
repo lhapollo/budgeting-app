@@ -27,10 +27,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className=" flex flex-row">
+        <Header />
+        <main>
         <NextAuthProvider>
           
           {children}
         </NextAuthProvider>
+        </main>
       </body>
     </html>
   );
