@@ -3,14 +3,14 @@
 import Link from "next/link";
 
 interface SidebarProps {
-    isOpen: boolean;
-    toggleSidebar: () => void;
+  isOpen: boolean;
+  toggleSidebar: () => void;
 }
 
 const links = [
-    { name: "Budget", path: "/budget"}, 
-    { name: "Expenses", path: "/expenses"},
-    { name: "Reports", path: "/reports"},
+  { name: "Budget", path: "/budget" },
+  { name: "Expenses", path: "/expenses" },
+  { name: "Reports", path: "/reports" },
 ];
 
 const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
@@ -24,7 +24,7 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
       >
         <div className="pt-20 pl-5">
           <ul className="mt-4">
-          {links.map((link) => (
+            {links.map((link) => (
               <li key={link.name} className="mb-2">
                 <Link
                   href={link.path}

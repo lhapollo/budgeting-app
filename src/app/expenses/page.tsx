@@ -1,6 +1,6 @@
 export default function Expenses() {
     return (
-        <div>
+        <div className="p-50">
         <h1>Expenses</h1>
         </div>
     );

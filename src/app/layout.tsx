@@ -34,7 +34,10 @@ export default function RootLayout({
       <body>
         <Header isOpen={isOpen} toggleSidebar={toggleSidebar}/>
         <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar}/>
-        <main className="pt-20 p-4">{children}</main>
+        <main className={`pt-20 p-4 transition-all duration-350" ${
+          isOpen ? "ml-64" : "ml-0"
+        } relative z-30`}
+        >{children}</main>
       </body>
     </html>
   );
