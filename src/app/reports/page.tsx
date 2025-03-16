@@ -1,7 +1,7 @@
-export default function Budget() {
+export default function Reports() {
     return (
         <div>
-        <h1>Budget</h1>
+        <h1>Reports</h1>
         </div>
     );
 }

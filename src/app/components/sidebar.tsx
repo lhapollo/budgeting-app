@@ -1,11 +1,18 @@
 "use client";
 
+import Link from "next/link";
+
 interface SidebarProps {
     isOpen: boolean;
     toggleSidebar: () => void;
 }
 
-// import { useState } from "react";
+const links = [
+    { name: "Budget", path: "/budget"}, 
+    { name: "Expenses", path: "/expenses"},
+    { name: "Reports", path: "/reports"},
+];
+
 const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
   return (
     <div>
@@ -17,21 +24,17 @@ const Sidebar = ({ isOpen, toggleSidebar }: SidebarProps) => {
       >
         <div className="pt-20 pl-5">
           <ul className="mt-4">
-            <li className="mb-2">
-              <a href="#" className="hover:text-gray-400">
-                Home
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="hover:text-gray-400">
-                About
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="hover:text-gray-400">
-                Contact
-              </a>
-            </li>
+          {links.map((link) => (
+              <li key={link.name} className="mb-2">
+                <Link
+                  href={link.path}
+                  onClick={toggleSidebar} // Close the sidebar when a link is clicked
+                  className="hover:text-gray-400 transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

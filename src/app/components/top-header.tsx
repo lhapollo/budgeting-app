@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 interface HeaderProps {
   isOpen: boolean;
   toggleSidebar: () => void;
@@ -43,7 +45,7 @@ export default function Header({ isOpen, toggleSidebar }: HeaderProps) {
             />
           </svg>
         </button>
-        <a href="#" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -61,7 +63,7 @@ export default function Header({ isOpen, toggleSidebar }: HeaderProps) {
           <p className="text-yellow-50 ml-4 font-semibold text-2xl mr-auto">
             LexIris
           </p>
-        </a>
+        </Link>
       </div>
 
       <ul className="flex gap-6 list-none text-gray-200">
